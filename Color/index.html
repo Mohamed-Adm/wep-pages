@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .c1 {
+        width: 700px;
+        height: 500px;
+        border: 5px solid black;
+        border-radius: 0.5rem;
+        margin: 0 auto;
+      }
+      .c2 {
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+      }
+      .header {
+        padding-top: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="logIn.html" style="font-size: 16pt; color:brown;
+      font-weight:bold">&lt;&lt;Back</a>
+    </div>
+    <div class="container c1">
+      <header class="header">
+        <h1>Background Color...</h1>
+      </header>
+    </div>
+    <div class="container c2">
+      <button type="button" class="btn btn-default" id="default">
+        Default
+      </button>
+      <button type="button" class="btn btn-primary btn-sm" id="rebc">
+        Rebecca
+      </button>
+      <button type="button" class="btn btn-warning btn-sm" id="yellow">
+        yellow
+      </button>
+      <button type="button" class="btn btn-danger btn-sm" id="red">Red</button>
+      <button type="button" class="btn btn-success btn-sm" id="green">
+        Green
+      </button>
+    </div>
+    <script>
+      const def = document.getElementById("default");
+      const rebc = document.querySelector("#rebc");
+      const yellow = document.getElementById("yellow");
+      const red = document.querySelector("#red");
+      const green = document.getElementById("green");
+      const change = document.querySelector(".c1");
+      const header = document.querySelector(".header");
+      rebc.addEventListener("click", () => {
+        change.style.backgroundColor = "rebeccapurple";
+      });
+      yellow.addEventListener("click", () => {
+        change.style.backgroundColor = "yellow";
+      });
+      red.addEventListener("click", () => {
+        change.style.backgroundColor = "red";
+      });
+      green.addEventListener("click", () => {
+        change.style.backgroundColor = "green";
+      });
+      def.addEventListener("click", () => {
+        change.style.backgroundColor = "white";
+        header.style.color = "red";
+      });
+    </script>
+  </body>
+</html>
